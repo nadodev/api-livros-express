@@ -1,6 +1,10 @@
+require('dotenv').config();
+
+const URL_MONGO = process.env.URL_MONGO ;
+
 const connect = () => {
     const mongoose = require('mongoose');
-    mongoose.connect('mongodb+srv://bemmenos:rxDHMwykXBXSRDun@cluster0.90cqyh1.mongodb.net/seu_banco_de_dados', {
+    mongoose.connect(URL_MONGO, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
